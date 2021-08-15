@@ -1,8 +1,8 @@
-import { Schedule } from '../../models/schedule';
+import { Schedule } from 'models/schedule';
 import './episode.scss'
 import Rating from 'react-rating'
 import { Link } from 'react-router-dom';
-import { calcRating }  from '../../utils/rating'
+import { calcRating }  from 'utils/rating'
 
 type Props = {
     episode: Schedule

@@ -1,7 +1,7 @@
 import { http } from './http/http'
 import { ApiEndpointUrls } from './api-endpoint-urls'
-import { Show } from '../models/show'
-import { Actor } from '../models/actor'
+import { Show } from 'models/show'
+import { Actor } from 'models/actor'
 
 interface ShowsInterface {
   fetchEpisodeDetails(id: string): Promise<any>

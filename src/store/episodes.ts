@@ -1,9 +1,9 @@
 import { AnyAction } from 'redux';
-import { Schedule } from '../models/schedule'
-import { Show } from '../models/show';
+import { Schedule } from 'models/schedule'
+import { Show } from 'models/show';
 import { ActionTypes } from './actions'
 
-type InitialState = {
+export interface InitialState {
 	episodes: Schedule[]
 	episodeDetails: Show | null
 }

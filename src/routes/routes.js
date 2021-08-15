@@ -1,7 +1,7 @@
 import React from 'react'
 import { Redirect, Switch, Route } from 'react-router-dom'
-import { Home } from '../views/home/home'
-import { EpisodeDetails } from '../views/episode-details/episode-details'
+import { Home } from 'views/home/home'
+import { EpisodeDetails } from 'views/episode-details/episode-details'
 
 export const ROUTES = [
 	{

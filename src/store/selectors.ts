@@ -1,4 +1,4 @@
-import { MainState } from '../models/main-state'
+import { MainState } from 'models/main-state'
 
 export const episodeSelector = {
     getEpisodeList: ({ episodesState }: MainState) =>

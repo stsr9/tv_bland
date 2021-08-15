@@ -1,8 +1,8 @@
 import { AnyAction } from 'redux'
 import { ActionTypes } from './actions'
-import { Actor } from'../models/actor'
+import { Actor } from 'models/actor'
 
-type InitialState = {
+export interface InitialState {
 	cast: Actor[]
 }
 

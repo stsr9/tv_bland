@@ -1,12 +1,12 @@
-import renderer from 'react-test-renderer';
-import { Provider } from 'react-redux';
-import { applyMiddleware, createStore} from 'redux';
-import { appReducers } from '../../store';
-import { EpisodeDetails } from './episode-details';
+import renderer from 'react-test-renderer'
+import { Provider } from 'react-redux'
+import { applyMiddleware, createStore} from 'redux'
+import { appReducers } from 'store'
+import { EpisodeDetails } from './episode-details'
 import thunk from 'redux-thunk'
-import { I18nextProvider } from 'react-i18next';
-import i18next from 'i18next';
-import common_en from "../../translations/en/common.json";
+import { I18nextProvider } from 'react-i18next'
+import i18next from 'i18next'
+import common_en from 'translations/en/common.json'
 
 const store = createStore(
     appReducers,
@@ -32,7 +32,7 @@ it('renders without crashing', () => {
             />
           </Provider>
       </I18nextProvider>
-  ).toJSON();
+  ).toJSON()
 
-  expect(episodeDetails).toMatchSnapshot();
-});
+  expect(episodeDetails).toMatchSnapshot()
+})

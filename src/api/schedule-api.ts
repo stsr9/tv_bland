@@ -1,6 +1,6 @@
 import { http } from './http/http'
 import { ApiEndpointUrls } from './api-endpoint-urls'
-import { Schedule } from '../models/schedule'
+import { Schedule } from 'models/schedule'
 
 interface ScheduleInterface {
   fetchAllEpisodes(): Promise<any>

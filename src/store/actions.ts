@@ -1,8 +1,8 @@
-import { Schedule } from '../models/schedule'
-import ScheduleAPI from '../api/schedule-api'
-import ShowAPI from '../api/shows-api'
-import { Show } from '../models/show'
-import { Actor } from '../models/actor'
+import { Schedule } from 'models/schedule'
+import ScheduleAPI from 'api/schedule-api'
+import ShowAPI from 'api/shows-api'
+import { Show } from 'models/show'
+import { Actor } from 'models/actor'
 
 export enum ActionTypes {
     fetchEpisodes = 'FETCH_EPISODES',

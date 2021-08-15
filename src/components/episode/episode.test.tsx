@@ -1,6 +1,6 @@
-import renderer from 'react-test-renderer';
-import { Episode } from './episode';
-import { Schedule } from "../../models/schedule";
+import renderer from 'react-test-renderer'
+import { Episode } from './episode'
+import { Schedule } from 'models/schedule'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 const episode = {

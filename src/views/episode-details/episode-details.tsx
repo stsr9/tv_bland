@@ -1,16 +1,16 @@
 import './episode-details.scss'
 import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { castSelector, episodeSelector} from '../../store/selectors'
-import { episodeActions } from "../../store/actions"
-import { castActions } from "../../store/actions"
-import { Show } from '../../models/show'
+import { castSelector, episodeSelector} from 'store/selectors'
+import { episodeActions } from 'store/actions'
+import { castActions } from 'store/actions'
+import { Show } from 'models/show'
 import Rating from 'react-rating'
 import DOMPurify from 'dompurify'
-import { calcRating }  from '../../utils/rating'
+import { calcRating }  from 'utils/rating'
 import { useTranslation } from 'react-i18next'
-import { Actor } from '../../models/actor'
-import { MetaDataList } from '../../components/meta-data-list/meta-data-list'
+import { Actor } from 'models/actor'
+import { MetaDataList } from 'components/meta-data-list/meta-data-list'
 
 type Props = {
     episodeId: number

@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Schedule } from '../../models/schedule'
-import { episodeActions } from '../../store/actions'
-import { episodeSelector } from '../../store/selectors'
-import { SplashScreen } from '../../components/splash-screen/splash-screen'
-import { Episode } from '../../components/episode/episode'
+import { Schedule } from 'models/schedule'
+import { episodeActions } from 'store/actions'
+import { episodeSelector } from 'store/selectors'
+import { SplashScreen } from 'components/splash-screen/splash-screen'
+import { Episode } from 'components/episode/episode'
 import { useTranslation } from 'react-i18next'
 import './home.scss'
 

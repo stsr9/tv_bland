@@ -1,8 +1,8 @@
 import { ActionTypes, episodeActions} from './actions'
-import ScheduleAPI from '../api/schedule-api'
-import ShowsAPI from '../api/shows-api'
-jest.mock('../api/schedule-api')
-jest.mock('../api/shows-api')
+import ScheduleAPI from 'api/schedule-api'
+import ShowsAPI from 'api/shows-api'
+jest.mock('api/schedule-api')
+jest.mock('api/shows-api')
 
 describe('Check for actions', () => {
     const dispatch = jest.fn()

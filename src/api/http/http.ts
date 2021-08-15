@@ -1,6 +1,6 @@
 import axios from './axios-instance'
 import { AxiosError } from 'axios'
-import { ExtendedRequestOptions } from '../../models/request-options'
+import { ExtendedRequestOptions } from 'models/request-options'
 
 const successHandler = (res: any) => res.data
 

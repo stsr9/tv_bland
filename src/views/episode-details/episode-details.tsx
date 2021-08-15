@@ -25,6 +25,7 @@ export const EpisodeDetails = ({ episodeId }: Props) => {
     useEffect(() => {
         dispatch(episodeActions.fetchEpisodeDetails(episodeId))
         dispatch(castActions.fetchCast(episodeId))
+        return () => { dispatch(episodeActions.clearDetails())}
 	}, [dispatch, episodeId])
 
     return episodeDetails && (

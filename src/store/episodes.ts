@@ -25,6 +25,11 @@ export const episodesState =  (state: InitialState = initialState, action: AnyAc
 				...state,
                 episodeDetails: action.episodeDetails
 			};
+		case ActionTypes.clearDetails:
+			return {
+				...state,
+                episodeDetails: null
+			};
 		default:
 			return state;
 	}

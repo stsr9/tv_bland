@@ -12,6 +12,10 @@ h1, h2 {
   margin: 0;
 }
 
+.logo {
+  cursor: pointer;
+}
+
 .app-header {
   padding: 5vh 10vw 0 10vw;
   background-color: lighten(lightgray, 10%);
@@ -19,6 +23,7 @@ h1, h2 {
     padding: 5vh 5vw 0 5vw;
   }
 }
+
 .view-header {
   background-color: lighten(lightgray, 10%);
   padding: 5vh 10vw 15vh 10vw;
@@ -32,10 +37,6 @@ h1, h2 {
   @media (max-width: 800px) {
     padding: 0 5vw 5vh 5vw;
   }
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 .flex {
@@ -59,11 +60,3 @@ h1, h2 {
   color: var(--color-primary)
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

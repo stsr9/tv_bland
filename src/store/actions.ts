@@ -7,12 +7,14 @@ import { Actor } from '../models/actor'
 export enum ActionTypes {
     fetchEpisodes = 'FETCH_EPISODES',
     fetchEpisodeDetails = 'FETCH_EPISODE_DETAILS',
-	fetchCast = 'FETCH_CAST'
+	fetchCast = 'FETCH_CAST',
+	clearDetails = 'CLEAR_DETAILS'
 }
 
 interface EpisodeActions {
 	fetchEpisodes: Function
 	fetchEpisodeDetails: Function
+	clearDetails: Function
 }
 
 interface CastActions {
@@ -32,6 +34,11 @@ export const episodeActions: EpisodeActions = {
 	    dispatch({
 			type: ActionTypes.fetchEpisodeDetails,
 			episodeDetails
+	    })
+	},
+	clearDetails: () => (dispatch: Function) => {
+		dispatch({
+			type: ActionTypes.clearDetails,
 	    })
 	}
 }

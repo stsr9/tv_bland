@@ -1,0 +1,18 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "viewportWidth": 1024,
+  "viewportHeight": 1024,
+  "video": false,
+  "reporter": "junit",
+  "reporterOptions": {
+    "mochaFile": "build/test-results/cypress-test-output.xml",
+    "toConsole": true,
+    "testsuitesTitle": "Cypress Tests",
+    "rootSuiteTitle": "Cypress Tests",
+    "includePending": false
+  },
+  "ignoreTestFiles": [
+    "**/__snapshots__/*",
+    "**/__image_snapshots__/*"
+  ]
+}

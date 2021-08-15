@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@cypress/browserify-preprocessor": "^3.0.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -14,6 +15,8 @@
     "@types/react-router-dom": "^5.1.8",
     "@types/react-test-renderer": "^17.0.1",
     "axios": "^0.21.1",
+    "cypress": "^8.2.0",
+    "cypress-plugin-snapshots": "1.4.3",
     "dompurify": "^2.3.0",
     "font-awesome": "^4.7.0",
     "i18next": "^20.4.0",
@@ -35,6 +38,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

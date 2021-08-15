@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div
+  className="app"
+>
+  <header
+    className="app-header"
+  >
+    <h2
+      className="logo"
+      onClick={[Function]}
+    >
+      TV Bland
+    </h2>
+  </header>
+  <div
+    className="splash-screen"
+  >
+    <h1>
+      TV BLAND
+    </h1>
+  </div>
+</div>
+`;

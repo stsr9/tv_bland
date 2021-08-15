@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div
+  className="data-row flex-column  icon-view"
+>
+  <div
+    className="with-icon flex"
+  >
+    <i
+      className="fa fa-user-circle"
+    />
+    <div>
+      <label>
+        Streamed on
+      </label>
+      <span>
+        Netflix
+      </span>
+    </div>
+  </div>
+  <div
+    className="with-icon flex"
+  >
+    <i
+      className="fa fa-user-circle"
+    />
+    <div>
+      <label>
+        Schedule
+      </label>
+      <span>
+        Monday
+      </span>
+    </div>
+  </div>
+</div>
+`;

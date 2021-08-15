@@ -6,7 +6,7 @@ import { castState } from './cast'
 
 const composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const appReducers = combineReducers({
+export const appReducers = combineReducers({
 	episodesState,
 	castState
 });

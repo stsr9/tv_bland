@@ -1,12 +1,12 @@
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import { applyMiddleware, createStore} from 'redux';
-import { appReducers } from './store';
-import App from './App';
+import { appReducers } from '../../store';
+import { EpisodeDetails } from './episode-details';
 import thunk from 'redux-thunk'
 import { I18nextProvider } from 'react-i18next';
 import i18next from 'i18next';
-import common_en from "./translations/en/common.json";
+import common_en from "../../translations/en/common.json";
 
 const store = createStore(
     appReducers,
@@ -24,13 +24,15 @@ i18next.init({
 })
 
 it('renders without crashing', () => {
-  const app = renderer.create(
+  const episodeDetails = renderer.create(
       <I18nextProvider i18n={i18next}>
           <Provider store={store}>
-            <App />
+            <EpisodeDetails
+                episodeId={11436}
+            />
           </Provider>
       </I18nextProvider>
   ).toJSON();
 
-  expect(app).toMatchSnapshot();
+  expect(episodeDetails).toMatchSnapshot();
 });

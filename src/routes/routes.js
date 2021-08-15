@@ -31,9 +31,7 @@ export const RenderRoutes = ({ routes, ...props }) => (
 				key={route.key}
 				path={route.path}
 				exact={route.exact}
-				render={(renderProps) => (
-					<route.component {...renderProps} {...props} />
-				)}
+				render={(renderProps) => <route.component {...renderProps} {...props} />}
 			/>
 		))}
 		<Route component={() => <Redirect to={'/episodes'} />} />

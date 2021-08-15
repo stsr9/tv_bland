@@ -3,7 +3,7 @@ import { ApiEndpointUrls } from './api-endpoint-urls'
 import { Schedule } from 'models/schedule'
 
 interface ScheduleInterface {
-	fetchAllEpisodes(): Promise<any>
+	fetchAllEpisodes(): Promise<Schedule[]>
 }
 
 class ScheduleAPI implements ScheduleInterface {

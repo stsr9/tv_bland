@@ -4,7 +4,7 @@ import { Show } from 'models/show'
 import { Actor } from 'models/actor'
 
 interface ShowsInterface {
-	fetchEpisodeDetails(id: string): Promise<any>
+	fetchEpisodeDetails(id: string): Promise<Show>
 }
 
 class ShowsAPI implements ShowsInterface {

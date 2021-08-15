@@ -12,6 +12,7 @@
     @media (max-width: 800px) {
       flex-direction: column;
       top: unset;
+      align-items: center;
     }
     img {
       margin-right: 30px;
@@ -23,6 +24,7 @@
         margin-bottom: 30px;
         width: 90%;
         min-width: 250px;
+        margin-right: 0;
       }
     }
   }

@@ -1,16 +1,47 @@
 import { Schedule } from '../models/schedule'
 import ScheduleAPI from '../api/schedule-api'
+import ShowAPI from '../api/shows-api'
+import { Show } from '../models/show'
+import { Actor } from '../models/actor'
 
-enum Actions {
-    fetchEpisodes = 'FETCH_EPISODES'
+export enum ActionTypes {
+    fetchEpisodes = 'FETCH_EPISODES',
+    fetchEpisodeDetails = 'FETCH_EPISODE_DETAILS',
+	fetchCast = 'FETCH_CAST'
 }
 
-export const episodeActions: { fetchEpisodes: Function } = {
-	fetchEpisodes: () => async (dispatch: Function) => {
+interface EpisodeActions {
+	fetchEpisodes: Function
+	fetchEpisodeDetails: Function
+}
+
+interface CastActions {
+	fetchCast: Function
+}
+
+export const episodeActions: EpisodeActions = {
+	fetchEpisodes: () => async(dispatch: Function) => {
 		const episodes: Schedule[] = await ScheduleAPI.fetchAllEpisodes()
 	    dispatch({
-			type: Actions.fetchEpisodes,
+			type: ActionTypes.fetchEpisodes,
 			episodes
+	    })
+	},
+	fetchEpisodeDetails: (id: string) => async(dispatch: Function) => {
+		const episodeDetails: Show = await ShowAPI.fetchEpisodeDetails(id)
+	    dispatch({
+			type: ActionTypes.fetchEpisodeDetails,
+			episodeDetails
+	    })
+	}
+}
+
+export const castActions: CastActions = {
+	fetchCast: (id: string) => async(dispatch: Function) => {
+		const cast: Actor[] = await ShowAPI.showCast(id)
+	    dispatch({
+			type: ActionTypes.fetchCast,
+			cast
 	    })
 	}
 }

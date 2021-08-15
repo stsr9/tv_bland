@@ -1,0 +1,56 @@
+.data-row {
+  @media (max-width: 800px) {
+      flex-direction: row;
+      &.icon-view {
+        flex-direction: column;
+      }
+      &.wrap-row {
+        display: unset;
+        > * {
+          width: 45%;
+          float: left;
+        }
+      }
+    }
+  > * {
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0;
+    display: flex;
+    @media (max-width: 800px) {
+      flex-direction: column;
+      border: unset;
+      span {
+        color: #ccc;
+      }
+    }
+  }
+  .with-icon {
+    align-items: center;
+    width: 100%;
+    @media (max-width: 800px) {
+      flex-direction: row;
+    }
+    i {
+      font-size: 2em;
+      margin-right: 20px;
+      position: absolute;
+      color: #ccc;
+      @media (max-width: 800px) {
+        font-size: 3em;
+      }
+    }
+    div {
+      padding-left: 60px;
+      display: flex;
+      flex-grow: 2;
+      @media (max-width: 800px) {
+        flex-direction: column;
+      }
+    }
+  }
+  label {
+    font-weight: bold;
+    flex-basis: 40%;
+    margin-right: 30px;
+  }
+}

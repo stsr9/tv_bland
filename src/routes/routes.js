@@ -1,6 +1,7 @@
 import React from 'react'
 import { Redirect, Switch, Route } from 'react-router-dom'
 import { Home } from '../views/home/home'
+import { EpisodeDetails } from '../views/episode-details/episode-details'
 
 export const ROUTES = [
 	{
@@ -14,7 +15,16 @@ export const ROUTES = [
 	{
 		path: '/episodes',
 		key: 'dashboard',
+		exact: true,
 		component: () => <Home />,
+	},
+	{
+		path: '/episodes/:id',
+		key: 'episodeId',
+		exact: true,
+		component: ({ match }) => (
+			<EpisodeDetails episodeId={match.params.id} />
+		),
 	}
 ];
 

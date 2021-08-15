@@ -27,7 +27,15 @@ export interface Show {
             timezone: string
         }
     }
-    webChannel: string | null
+    webChannel: {
+        id: number
+        name: string
+        country: {
+            code: string
+            name: string
+            timezone: string
+        }
+    }
     dvdCountry: string | null
     externals: {
         tvrage: number

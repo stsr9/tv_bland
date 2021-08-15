@@ -1,0 +1,23 @@
+.episode {
+  z-index: 1;
+  gap: 10px;
+  .image {
+    cursor: pointer;
+    img {
+      @media (max-width: 800px) {
+       width: 95%;
+      }
+    }
+  }
+  .rating {
+    color: orange;
+    padding-right: 5px;
+    @media (max-width: 800px) {
+       display: none;
+    }
+  }
+  .title {
+    text-align: left;
+    cursor: pointer;
+  }
+}

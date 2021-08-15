@@ -1,13 +1,62 @@
-.App {
-  text-align: center;
+:root {
+  --color-primary: #333;
+  --breakpoint-large: 1600px;
+  --font-size-small: .8em
 }
 
-.App-header {
+.app {
+  text-align: left;
+}
 
+h1, h2 {
+  margin: 0;
+}
+
+.app-header {
+  padding: 5vh 10vw 0 10vw;
+  background-color: lighten(lightgray, 10%);
+  @media (max-width: 800px) {
+    padding: 5vh 5vw 0 5vw;
+  }
+}
+.view-header {
+  background-color: lighten(lightgray, 10%);
+  padding: 5vh 10vw 15vh 10vw;
+  @media (max-width: 800px) {
+    padding: 5vh 5vw 0 5vw;
+  }
+}
+
+.view-content {
+  padding: 0 10vw 5vh 10vw;
+  @media (max-width: 800px) {
+    padding: 0 5vw 5vh 5vw;
+  }
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.fwn {
+  font-weight: normal;
+}
+
+.fwb {
+  font-weight: bold;
+}
+
+.dtc {
+  color: var(--color-primary)
 }
 
 @keyframes App-logo-spin {

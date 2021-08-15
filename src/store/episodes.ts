@@ -1,17 +1,29 @@
-import { AnyAction } from "redux";
+import { AnyAction } from 'redux';
 import { Schedule } from '../models/schedule'
-type InitialState = { episodes: Schedule[] }
+import { Show } from '../models/show';
+import { ActionTypes } from './actions'
+
+type InitialState = {
+	episodes: Schedule[]
+	episodeDetails: Show | null
+}
 
 const initialState: InitialState = {
-	episodes: []
+	episodes: [],
+	episodeDetails: null
 };
 
 export const episodesState =  (state: InitialState = initialState, action: AnyAction) => {
 	switch (action.type) {
-		case 'FETCH_EPISODES':
+		case ActionTypes.fetchEpisodes:
 			return {
 				...state,
                 episodes: action.episodes
+			};
+		case ActionTypes.fetchEpisodeDetails:
+			return {
+				...state,
+                episodeDetails: action.episodeDetails
 			};
 		default:
 			return state;

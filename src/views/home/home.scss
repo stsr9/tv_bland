@@ -1,0 +1,42 @@
+.home {
+  p {
+    color: gray;
+    font-size: 1.2em;
+    width: 30vw;
+    @media (max-width: 800px) {
+      width: 90vw;
+    }
+  }
+  .view-header {
+    @media (max-width: 800px) {
+      padding-bottom: 3vh;
+    }
+  }
+  .episode-list {
+    margin-top: -10vh;
+    @media (max-width: 800px) {
+      margin-top: 3vh;
+    }
+  }
+  .episode-grid {
+    padding-top: 3vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
+    align-items: flex-start;
+    grid-gap: 1rem;
+    @media (max-width: 1600px) {
+      grid-template-columns: repeat(5, minmax(15%, 1fr));
+    }
+    @media (max-width: 1400px) {
+      grid-template-columns: repeat(4, minmax(15%, 1fr));
+    }
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(3, minmax(15%, 1fr));
+    }
+    @media (max-width: 800px) {
+      grid-template-columns: repeat(2, minmax(15%, 1fr));
+      grid-gap: .7rem;
+    }
+
+  }
+}

@@ -1,5 +1,14 @@
 {
     "mainTitle": "TV Bland",
     "homeHeadline": "TV Show and web series database.",
-    "homeHeaderText": "Create personalized schedules. Episodes guide, cast, crew and character information."
+    "homeHeaderText": "Create personalized schedules. Episodes guide, cast, crew and character information.",
+    "episodeListTitle": "Last Added Shows",
+    "episodeDetails": {
+        "showInfo": "Show info",
+        "streamedOn": "Streamed on",
+        "schedule": "Schedule",
+        "status": "Status",
+        "genres": "Genres",
+        "staring": "Starring"
+    }
 }

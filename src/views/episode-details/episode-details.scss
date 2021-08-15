@@ -1,0 +1,56 @@
+.episode-details {
+  .view-header {
+    padding-bottom: 0;
+    @media (max-width: 800px) {
+      padding-bottom: 3vh;
+    }
+  }
+  .details-header {
+    align-items: flex-start;
+    position: relative;
+    top: 2vh;
+    @media (max-width: 800px) {
+      flex-direction: column;
+      top: unset;
+    }
+    img {
+      margin-right: 30px;
+      border: 1px solid #cccc;
+      @media (max-width: 800px) {
+        margin-bottom: 30px;
+      }
+      @media (max-width: 500px) {
+        margin-bottom: 30px;
+        width: 90%;
+        min-width: 250px;
+      }
+    }
+  }
+  .summary {
+    padding-bottom: 3vh;
+    height: 140px;
+    overflow-y: auto;
+    p {
+      width: 50vw;
+      line-height: 24px;
+      font-size: var(--font-size-small);
+      @media (max-width: 800px) {
+        width: 90vw;
+      }
+    }
+  }
+  .rating {
+    color: orange;
+  }
+  .episode-meta-data {
+    margin-top: 5vh;
+    justify-content: space-between;
+    @media (max-width: 800px) {
+      flex-direction: column;
+    }
+    .episode-info, .episode-roles {
+      padding-bottom: 2vh;
+      flex-basis: 48%;
+    }
+  }
+}

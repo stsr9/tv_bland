@@ -15,14 +15,11 @@
     "@types/react-router-dom": "^5.1.8",
     "@types/react-test-renderer": "^17.0.1",
     "axios": "^0.21.1",
-    "cross-env": "^7.0.3",
     "cypress": "^8.2.0",
     "cypress-plugin-snapshots": "1.4.3",
     "dompurify": "^2.3.0",
     "font-awesome": "^4.7.0",
-    "husky": "^7.0.1",
     "i18next": "^20.4.0",
-    "lint-staged": "^11.1.2",
     "node-sass": "4.14.1",
     "prettier": "^2.3.2",
     "react": "^17.0.2",
@@ -44,28 +41,13 @@
     "test": "react-scripts test",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prettier": "prettier --write \"**/*.{tsx,ts,js}\""
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "cross-env CI=true yarn test"
-    }
-  },
-  "lint-staged": {
-    "cypress/**/*.{js}": [
-      "prettier --write",
-      "git add"
-    ],
-    "src/**/*.{ts,tsx,scss,js}": [
-      "prettier --write",
-      "git add"
     ]
   },
   "prettier": {
@@ -90,5 +72,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {}
 }

@@ -8,16 +8,19 @@ export interface InitialState {
 
 const initialState: InitialState = {
 	cast: []
-};
+}
 
-export const castState =  (state: InitialState = initialState, action: AnyAction) => {
+export const castState = (
+	state: InitialState = initialState,
+	action: AnyAction
+) => {
 	switch (action.type) {
 		case ActionTypes.fetchCast:
 			return {
 				...state,
-                cast: action.cast
+				cast: action.cast
 			}
 		default:
-			return state;
+			return state
 	}
-};
+}

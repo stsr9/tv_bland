@@ -1,4 +1,4 @@
-Cypress.Commands.add("stubTVMazeServer", () => {
+Cypress.Commands.add('stubTVMazeServer', () => {
 	cy.server()
 
 	cy.route('GET', '/schedule', 'fixture:schedule').as('episodes')
@@ -6,6 +6,4 @@ Cypress.Commands.add("stubTVMazeServer", () => {
 	cy.route('GET', '/shows/2915', 'fixture:show').as('show')
 
 	cy.route('GET', '/shows/2915/cast', 'fixture:cast').as('cast')
-
 })
-

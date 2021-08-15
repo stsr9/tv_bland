@@ -1,6 +1,6 @@
-import { AnyAction } from 'redux';
+import { AnyAction } from 'redux'
 import { Schedule } from 'models/schedule'
-import { Show } from 'models/show';
+import { Show } from 'models/show'
 import { ActionTypes } from './actions'
 
 export interface InitialState {
@@ -11,26 +11,29 @@ export interface InitialState {
 const initialState: InitialState = {
 	episodes: [],
 	episodeDetails: null
-};
+}
 
-export const episodesState =  (state: InitialState = initialState, action: AnyAction) => {
+export const episodesState = (
+	state: InitialState = initialState,
+	action: AnyAction
+) => {
 	switch (action.type) {
 		case ActionTypes.fetchEpisodes:
 			return {
 				...state,
-                episodes: action.episodes
-			};
+				episodes: action.episodes
+			}
 		case ActionTypes.fetchEpisodeDetails:
 			return {
 				...state,
-                episodeDetails: action.episodeDetails
-			};
+				episodeDetails: action.episodeDetails
+			}
 		case ActionTypes.clearDetails:
 			return {
 				...state,
-                episodeDetails: null
-			};
+				episodeDetails: null
+			}
 		default:
-			return state;
+			return state
 	}
-};
+}

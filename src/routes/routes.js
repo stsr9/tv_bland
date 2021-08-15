@@ -8,25 +8,21 @@ export const ROUTES = [
 		path: '/',
 		key: 'root',
 		exact: true,
-		component: () => (
-			<Redirect to={'/episodes'} />
-		)
+		component: () => <Redirect to={'/episodes'} />
 	},
 	{
 		path: '/episodes',
 		key: 'dashboard',
 		exact: true,
-		component: () => <Home />,
+		component: () => <Home />
 	},
 	{
 		path: '/episodes/:id',
 		key: 'episodeId',
 		exact: true,
-		component: ({ match }) => (
-			<EpisodeDetails episodeId={match.params.id} />
-		),
+		component: ({ match }) => <EpisodeDetails episodeId={match.params.id} />
 	}
-];
+]
 
 export const RenderRoutes = ({ routes, ...props }) => (
 	<Switch>
@@ -40,10 +36,6 @@ export const RenderRoutes = ({ routes, ...props }) => (
 				)}
 			/>
 		))}
-		<Route
-			component={() => (
-				<Redirect to={'/episodes'} />
-			)}
-		/>
+		<Route component={() => <Redirect to={'/episodes'} />} />
 	</Switch>
-);
+)

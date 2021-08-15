@@ -1,3 +1,5 @@
 export default {
-  fetchEpisodeDetails: jest.fn().mockReturnValue(Promise.resolve([{name: 'Episode 1'}]))
+	fetchEpisodeDetails: jest
+		.fn()
+		.mockReturnValue(Promise.resolve([{ name: 'Episode 1' }]))
 }

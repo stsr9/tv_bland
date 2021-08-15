@@ -3,16 +3,16 @@ import { ApiEndpointUrls } from './api-endpoint-urls'
 import { Schedule } from 'models/schedule'
 
 interface ScheduleInterface {
-  fetchAllEpisodes(): Promise<any>
+	fetchAllEpisodes(): Promise<any>
 }
 
 class ScheduleAPI implements ScheduleInterface {
-  fetchAllEpisodes(): Promise<Schedule[]> {
-    return http({
-      method: 'get',
-      url: ApiEndpointUrls.schedule,
-    })
-  }
+	fetchAllEpisodes(): Promise<Schedule[]> {
+		return http({
+			method: 'get',
+			url: ApiEndpointUrls.schedule
+		})
+	}
 }
 
 export default new ScheduleAPI()

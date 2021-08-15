@@ -1,4 +1,4 @@
 export enum ApiEndpointUrls {
-    schedule = '/schedule',
-    shows = '/shows'
+	schedule = '/schedule',
+	shows = '/shows'
 }

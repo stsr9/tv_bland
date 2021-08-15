@@ -1,2 +1,2 @@
-import 'cypress-plugin-snapshots/commands';
+import 'cypress-plugin-snapshots/commands'
 import './commands'

@@ -4,23 +4,23 @@ import { Show } from 'models/show'
 import { Actor } from 'models/actor'
 
 interface ShowsInterface {
-  fetchEpisodeDetails(id: string): Promise<any>
+	fetchEpisodeDetails(id: string): Promise<any>
 }
 
 class ShowsAPI implements ShowsInterface {
-  fetchEpisodeDetails(id: string): Promise<Show> {
-    return http({
-      method: 'get',
-      url: `${ApiEndpointUrls.shows}/${id}`,
-    })
-  }
+	fetchEpisodeDetails(id: string): Promise<Show> {
+		return http({
+			method: 'get',
+			url: `${ApiEndpointUrls.shows}/${id}`
+		})
+	}
 
-  showCast(id: string): Promise<Actor[]> {
-    return http({
-      method: 'get',
-      url: `${ApiEndpointUrls.shows}/${id}/cast`,
-    })
-  }
+	showCast(id: string): Promise<Actor[]> {
+		return http({
+			method: 'get',
+			url: `${ApiEndpointUrls.shows}/${id}/cast`
+		})
+	}
 }
 
 export default new ShowsAPI()

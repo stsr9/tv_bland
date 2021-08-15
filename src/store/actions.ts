@@ -5,8 +5,8 @@ import { Show } from 'models/show'
 import { Actor } from 'models/actor'
 
 export enum ActionTypes {
-    fetchEpisodes = 'FETCH_EPISODES',
-    fetchEpisodeDetails = 'FETCH_EPISODE_DETAILS',
+	fetchEpisodes = 'FETCH_EPISODES',
+	fetchEpisodeDetails = 'FETCH_EPISODE_DETAILS',
 	fetchCast = 'FETCH_CAST',
 	clearDetails = 'CLEAR_DETAILS'
 }
@@ -22,33 +22,33 @@ interface CastActions {
 }
 
 export const episodeActions: EpisodeActions = {
-	fetchEpisodes: () => async(dispatch: Function) => {
+	fetchEpisodes: () => async (dispatch: Function) => {
 		const episodes: Schedule[] = await ScheduleAPI.fetchAllEpisodes()
-	    dispatch({
+		dispatch({
 			type: ActionTypes.fetchEpisodes,
 			episodes
-	    })
+		})
 	},
-	fetchEpisodeDetails: (id: string) => async(dispatch: Function) => {
+	fetchEpisodeDetails: (id: string) => async (dispatch: Function) => {
 		const episodeDetails: Show = await ShowAPI.fetchEpisodeDetails(id)
-	    dispatch({
+		dispatch({
 			type: ActionTypes.fetchEpisodeDetails,
 			episodeDetails
-	    })
+		})
 	},
 	clearDetails: () => (dispatch: Function) => {
 		dispatch({
-			type: ActionTypes.clearDetails,
-	    })
+			type: ActionTypes.clearDetails
+		})
 	}
 }
 
 export const castActions: CastActions = {
-	fetchCast: (id: string) => async(dispatch: Function) => {
+	fetchCast: (id: string) => async (dispatch: Function) => {
 		const cast: Actor[] = await ShowAPI.showCast(id)
-	    dispatch({
+		dispatch({
 			type: ActionTypes.fetchCast,
 			cast
-	    })
+		})
 	}
 }
